@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flask Survey</title>
+</head>
+<body>
+  {% for msg in get_flashed_messages() %}
+  <!-- Flask-specific syntax to loop through flashed messages -->
+    <p>{{ msg }}</p> 
+  <!-- Displays each flashed message in a paragraph element -->
+  {% endfor %} 
+  <!-- End of flashed messages loop -->
+  {% block content %} 
+  <!-- Flask-specific syntax for defining a block of content to be overridden in a child template -->
+  {% endblock %} 
+</body>
+</html>

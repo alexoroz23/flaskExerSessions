@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+<!-- A Jinja2 template tag that indicates that this template extends the "base.html" template -->
+
+{% block content %} 
+<!-- A Jinja2 template block that overrides the "content" block in the "base.html" template -->
+<h1>{{ survey.title }}</h1> 
+<!-- A Jinja2 template variable that displays the title of the survey -->
+<p>
+  {{ survey.instructions }} 
+  <!-- A Jinja2 template variable that displays the instructions for the survey -->
+</p>
+
+<form action="/start" method="POST"> 
+    <!-- A HTML form that posts data to the "/start" endpoint when the submit button is clicked -->
+  <button>Start!</button> 
+  <!-- A HTML button that allows the user to start the survey -->
+</form>
+{% endblock %}
