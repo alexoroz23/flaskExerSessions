@@ -17,7 +17,7 @@ def show_survey_start():
     # Render survey_start.html template with survey object
     return render_template("survey_start.html", survey=survey)
 
-@app.route("/begin", methods=["POST"])
+@app.route("/start", methods=["POST"])
 def start_survey():
     """Clear the session of responses."""
     # Clear session of responses by setting empty list
